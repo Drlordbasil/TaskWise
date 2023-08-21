@@ -1,0 +1,18 @@
+To generate the `requirements.txt` file for the Python program you provided, we need to identify the required Python packages used in the code. Here are the identified package requirements:
+
+```
+datetime
+random
+smtplib
+email
+```
+
+Please note that the `email` package is a standard library package and does not need to be installed separately.
+
+You can create a `requirements.txt` file with the above package requirements and specify the versions if needed. Here is an example `requirements.txt` file:
+
+```
+datetime
+random
+smtplib
+```
