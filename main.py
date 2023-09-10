@@ -22,7 +22,8 @@ class ScheduleOptimizer:
         schedule = []
 
         while unallocated_tasks:
-            available_tasks = [task for task in unallocated_tasks if all(dependency in schedule for dependency in task.dependencies)]
+            available_tasks = [task for task in unallocated_tasks if all(
+                dependency in schedule for dependency in task.dependencies)]
 
             if not available_tasks:
                 return "Error: Task dependency cycle detected"
@@ -36,7 +37,8 @@ class ScheduleOptimizer:
     def _get_highest_priority_task(self, tasks):
         priorities = [self._calculate_task_priority(task) for task in tasks]
         max_priority = max(priorities)
-        max_priority_tasks = [task for task, priority in zip(tasks, priorities) if priority == max_priority]
+        max_priority_tasks = [task for task, priority in zip(
+            tasks, priorities) if priority == max_priority]
 
         return random.choice(max_priority_tasks)
 
@@ -175,11 +177,11 @@ class DataAnalyzer:
         pass
 
     def analyze_data(self, data):
-         # Code to analyze data patterns
+        # Code to analyze data patterns
         pass
 
     def generate_report(self):
-         # Code to generate data analysis report
+        # Code to generate data analysis report
         pass
 
 
@@ -218,7 +220,8 @@ def main():
         print(task.name)
 
     reminder_sender = ReminderSender("sender@example.com", "password")
-    reminder_sender.send_reminder("recipient@example.com", "Don't forget about Task 2!")
+    reminder_sender.send_reminder(
+        "recipient@example.com", "Don't forget about Task 2!")
 
     task_manager = TaskManager(tasks)
     prioritized_tasks = task_manager.prioritize_tasks()
@@ -263,7 +266,8 @@ def main():
     new_instance = NewClass()
     new_instance.perform_action()
 
-    additional_instance = AdditionalClass()  # Creating an instance of the additional class
+    # Creating an instance of the additional class
+    additional_instance = AdditionalClass()
     additional_instance.additional_action()
 
 
